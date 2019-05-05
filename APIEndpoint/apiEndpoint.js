@@ -14,22 +14,7 @@ function createOutputObject(results, yr) {
     const amt = parseFloat(result.outlay_amt);
     const fq = result.outlay_fq;
     if (result.outlay_fy == yr) {
-      switch (fq) {
-        case '1':
-          updateKeyValue(obj, fq, yr, amt);
-          break;
-        case '2':
-          updateKeyValue(obj, fq, yr, amt);
-          break;
-        case '3':
-          updateKeyValue(obj, fq, yr, amt);
-          break;
-        case '4':
-          updateKeyValue(obj, fq, yr, amt);
-          break;
-        default:
-          null;
-      }
+      updateKeyValue(obj, fq, yr, amt);
     }
   });
   return obj;

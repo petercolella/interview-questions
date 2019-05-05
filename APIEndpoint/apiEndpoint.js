@@ -1,4 +1,5 @@
 const axios = require('axios');
+const request = require('request');
 const url = 'https://api.agency.gov/data/fiscal?format=json';
 const exampleResponse = require('./exampleResponse');
 
@@ -55,6 +56,13 @@ function getData(url, year) {
       const outputObj = createOutputObject(exampleResponse.results, year);
       logOutputObject(outputObj);
     });
+  request(url, (error, response, body) => {
+    console.log(error.message);
+    console.log('statusCode:', response && response.statusCode);
+    body = exampleResponse;
+    const outputObj = createOutputObject(body.results, year);
+    logOutputObject(outputObj);
+  });
 }
 
 getData(url, 2018);

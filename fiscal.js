@@ -56,7 +56,7 @@ const exampleResponse = {
       name: 'EPA',
       outlay_fy: '2018',
       outlay_fq: '3',
-      outlay_amt: '100000',
+      outlay_amt: '98000.375',
       budget: '15000',
       contact: 'whoever'
     },
@@ -72,7 +72,7 @@ const exampleResponse = {
       name: 'LABOR',
       outlay_fy: '2018',
       outlay_fq: '2',
-      outlay_amt: '130000',
+      outlay_amt: '1520000.33',
       budget: '15000',
       contact: 'whoever'
     },
@@ -80,7 +80,7 @@ const exampleResponse = {
       name: 'INTERIOR',
       outlay_fy: '2018',
       outlay_fq: '1',
-      outlay_amt: '120000',
+      outlay_amt: '117000.875',
       budget: '15000',
       contact: 'whoever'
     },
@@ -88,7 +88,7 @@ const exampleResponse = {
       name: 'EDUCATION',
       outlay_fy: '2018',
       outlay_fq: '4',
-      outlay_amt: '110000',
+      outlay_amt: '43000.67',
       budget: '15000',
       contact: 'whoever'
     },
@@ -104,7 +104,7 @@ const exampleResponse = {
       name: 'LABOR',
       outlay_fy: '2018',
       outlay_fq: '2',
-      outlay_amt: '70000',
+      outlay_amt: '75000.170',
       budget: '15000',
       contact: 'whoever'
     },
@@ -112,7 +112,7 @@ const exampleResponse = {
       name: 'INTERIOR',
       outlay_fy: '2018',
       outlay_fq: '1',
-      outlay_amt: '80000',
+      outlay_amt: '8300.002',
       budget: '15000',
       contact: 'whoever'
     },
@@ -120,7 +120,7 @@ const exampleResponse = {
       name: 'EDUCATION',
       outlay_fy: '2018',
       outlay_fq: '4',
-      outlay_amt: '90000',
+      outlay_amt: '6200.777',
       budget: '15000',
       contact: 'whoever'
     }
@@ -168,7 +168,7 @@ function outlay(url, year) {
       Object.keys(outputObj)
         .sort()
         .forEach(key => {
-          console.log(`${key}: ${outputObj[key]}`);
+          console.log(`${key}: ${outputObj[key].toLocaleString()}`);
         });
     });
 }
